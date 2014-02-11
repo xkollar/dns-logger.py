@@ -1,0 +1,11 @@
+[Unit]
+Description=DNS logging service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/dnslog.sh start
+ExecStop=/usr/bin/dnslog.sh stop
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
